@@ -186,6 +186,7 @@ export const CreateChartWithTexture = async (vertexData: Float32Array, normalDat
         colorAttachments: [{
             view: textureView,
             clearValue: { r: 0.2, g: 0.247, b: 0.314, a: 1.0 }, //background color
+            loadValue: { r: 0.2, g: 0.247, b: 0.314, a: 1.0 }, //background color
             loadOp: 'clear',
             storeOp: 'store'
         }],
