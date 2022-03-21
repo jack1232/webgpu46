@@ -193,9 +193,11 @@ export const CreateChartWithTexture = async (vertexData: Float32Array, normalDat
         depthStencilAttachment: {
             view: depthTexture.createView(),
             depthClearValue: 1.0,
+            depthLoadValue: 1.0,
             depthLoadOp: "clear",
             depthStoreOp: "store",
             stencilClearValue: 0,
+            stencilLoadValue: 0,
             stencilStoreOp: "store",
             stencilLoadOp: 'clear'
         }
