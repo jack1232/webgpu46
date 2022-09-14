@@ -26,6 +26,7 @@ export const CreateChartWithTexture = async (vertexData: Float32Array, normalDat
  
     //const shader = Shaders({});
     const pipeline = device.createRenderPipeline({
+        layout:'auto',
         vertex: {
             module: device.createShaderModule({                    
                 code: shader
@@ -192,11 +193,8 @@ export const CreateChartWithTexture = async (vertexData: Float32Array, normalDat
         depthStencilAttachment: {
             view: depthTexture.createView(),
             depthClearValue: 1.0,
-            depthLoadOp: "clear",
-            depthStoreOp: "store",
-            stencilClearValue: 0,
-            stencilStoreOp: "store",
-            stencilLoadOp: 'clear'
+            depthLoadOp: 'clear',
+            depthStoreOp: "store",           
         }
     };
     
